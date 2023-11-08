@@ -1,0 +1,32 @@
+<p>policy works!</p>
+
+
+<div>
+    <a routerLink="/policies/add">Add Policy</a>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Creator Id</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let policy of policies">
+        <th scope="row">{{ policy.id }}</th>
+        <td>{{ policy.title }}</td>
+        <td>{{ policy.creator_id }}</td>
+        <td><a routerLink="/policies/update/{{ policy.id }}" class="btn btn-primary">Update</a></td>
+        <td><button (click)="deletePolicy(policy.id)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <router-outlet></router-outlet>
+</div>

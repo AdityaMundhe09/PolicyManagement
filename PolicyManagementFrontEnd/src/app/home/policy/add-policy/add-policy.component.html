@@ -1,0 +1,48 @@
+<p>add-policy works!</p>
+
+<!-- <form >
+    <input type="text" placeholder="Enter Policy Title" [(ngModel)]="form.title" name="title">
+    <ng-select [items]="categories" 
+           bindLabel="name" 
+           bindValue="id" 
+           [(ngModel)]="selectedCategories">
+</ng-select>
+<ng-select [items]="groups" 
+           bindLabel="name" 
+           bindValue="id" 
+           [(ngModel)]="selectedGroups">
+</ng-select>
+    <button (click)="save()">Save</button>
+</form> -->
+
+
+
+
+
+<form class="text-center border border-light p-5" (ngSubmit)="save()">
+    <p class="h4 mb-4">Add Policy</p>
+
+        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="title" [(ngModel)]="form.title" name="title" [ngModelOptions]="{standalone:true}">
+        <br>
+        <ng-select [items]="categories" 
+           bindLabel="name" 
+           bindValue="id" 
+           [multiple]="true"
+           [(ngModel)]="form.category_id"
+           [ngModelOptions]="{standalone:true}">
+</ng-select>
+<br>
+<ng-select [items]="groups" 
+           bindLabel="name" 
+           bindValue="id" 
+           [multiple]="true"
+           [(ngModel)]="form.group_id"
+           [ngModelOptions]="{standalone:true}">
+</ng-select>
+
+      
+    <!-- Sign up button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Save</button>
+
+    
+  </form>

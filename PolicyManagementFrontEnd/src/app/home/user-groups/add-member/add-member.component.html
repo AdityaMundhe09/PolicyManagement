@@ -1,0 +1,26 @@
+<p>add-member works!</p>
+
+
+
+
+
+<form class="text-center border border-light p-5" (ngSubmit)="add()">
+    <p class="h4 mb-4">Add Member</p>
+
+        
+        <ng-select [items]="users" 
+           bindLabel="name" 
+           bindValue="id" 
+           [multiple]="true"
+           [(ngModel)]="form.user_id"
+           [ngModelOptions]="{standalone:true}">
+</ng-select>
+<br>
+
+
+      
+    <!-- Sign up button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Add</button>
+
+    
+  </form>

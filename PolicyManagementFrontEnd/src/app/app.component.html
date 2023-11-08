@@ -1,0 +1,28 @@
+<!-- <nav class="flex justify-between p-2 bg-purple-900 text-white">
+  <div>
+      <a routerLink="/">Home</a>
+  </div>
+  <div>
+      <a class="mx-4" routerLink="/login">Login</a>
+      <a class="mx-4" routerLink="/register">Register</a>
+  </div>
+</nav> -->
+
+<ul ngbNav #nav="ngbNav" [destroyOnHide]="false" class="nav-tabs">
+	<li [ngbNavItem]="1" [destroyOnHide]="true">
+		<a routerLink="/">Home</a>
+		
+	</li>
+	<li [ngbNavItem]="2">
+		<a class="mx-4" routerLink="/login">Login</a>
+		
+	</li>
+	<li [ngbNavItem]="3">
+		<a class="mx-4" routerLink="/register">Register</a>
+		
+	</li>
+</ul>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

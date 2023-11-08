@@ -1,0 +1,26 @@
+<p>update-group works!</p>
+
+
+
+
+
+<form class="text-center border border-light p-5" (ngSubmit)="update()">
+    <p class="h4 mb-4">Update Group</p>
+    <input type="number" id="defaultRegisterFormFirstName" class="form-control" placeholder="id" [(ngModel)]="group.id" name="id" disabled>
+    <br>
+        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="name" [(ngModel)]="group.name" name="name">
+        <br>
+    <!-- E-mail -->
+    <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="group.created_at" name="created_at">
+    <!-- Password -->
+    <input type="text" id="defaultRegisterFormPassword" class="form-control" placeholder="updated_at"
+      aria-describedby="defaultRegisterFormPasswordHelpBlock" [(ngModel)]="group.updated_at" name="updated_at">
+
+      <br>
+
+      
+    <!-- Sign up button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Update</button>
+
+    
+  </form>

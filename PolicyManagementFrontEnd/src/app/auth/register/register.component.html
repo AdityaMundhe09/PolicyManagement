@@ -1,0 +1,30 @@
+<!-- Default form register -->
+<form class="text-center border border-light p-5" (ngSubmit)="register()">
+    <p class="h4 mb-4">Sign up</p>
+        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Name" [(ngModel)]="form.name" name="name">
+        <br>
+        <input type="text" id="defaultRegisterFormRole" class="form-control" placeholder="Role" [(ngModel)]="form.role" name="role">
+        <br>
+    <!-- E-mail -->
+    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="form.email" name="email">
+    <!-- Password -->
+    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password"
+      aria-describedby="defaultRegisterFormPasswordHelpBlock" [(ngModel)]="form.password" name="password">
+
+      <br>
+
+      <input type="password" id="defaultRegisterFormConirmPassword" class="form-control" placeholder="Confirm Password"
+      aria-describedby="defaultRegisterFormConfirmPasswordHelpBlock" [(ngModel)]="form.password_confirmation" name="password_confirmation">
+    <!-- Sign up button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Register</button>
+
+    <p>already a member?
+        <a routerLink="/login">Login</a>
+    </p>
+  </form>
+  
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Default form register -->

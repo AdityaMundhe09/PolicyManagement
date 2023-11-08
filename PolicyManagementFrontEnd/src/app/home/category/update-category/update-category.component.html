@@ -1,0 +1,26 @@
+<p>update-category works!</p>
+
+
+
+<form class="text-center border border-light p-5" (ngSubmit)="update()">
+    <p class="h4 mb-4">Update Category</p>
+    <input type="number" id="defaultRegisterFormFirstName" class="form-control" placeholder="id" [(ngModel)]="category.id" name="id" disabled>
+    <br>
+        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="name" [(ngModel)]="category.name" name="name">
+        <br>
+        <input type="number" id="defaultRegisterFormRole" class="form-control" placeholder="Creator_id" [(ngModel)]="category.creator_id" name="creator_id" disabled>
+        <br>
+    <!-- E-mail -->
+    <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="category.created_at" name="created_at">
+    <!-- Password -->
+    <input type="text" id="defaultRegisterFormPassword" class="form-control" placeholder="updated_at"
+      aria-describedby="defaultRegisterFormPasswordHelpBlock" [(ngModel)]="category.updated_at" name="updated_at">
+
+      <br>
+
+      
+    <!-- Sign up button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Update</button>
+
+    
+  </form>
